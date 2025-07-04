@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+/* Custom scrollbar for chat window */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Prose styling adjustments for markdown */
+.prose {
+  @apply text-gray-900;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-gray-900 font-semibold;
+}
+
+.prose p {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.prose ul,
+.prose ol {
+  @apply text-gray-700;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-blue-200 bg-blue-50 text-blue-900;
+}
+
+.prose a {
+  @apply text-blue-600 hover:text-blue-800 no-underline hover:underline;
+}
